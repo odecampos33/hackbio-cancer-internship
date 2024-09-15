@@ -33,9 +33,9 @@ Clustering of genes and samples was performed in three ways:
 3. Clustering of samples alone (Figure 4).
 
  
-![Figure 1: EFGR siggnaling](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
 
-
+https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true
+![Figure 1: EGFR signaling](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
  
 
 These visualizations identified distinct gene expression patterns, helping to group related genes and patients based on their molecular signatures.
