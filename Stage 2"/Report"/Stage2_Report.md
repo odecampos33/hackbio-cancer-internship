@@ -33,8 +33,8 @@ Clustering of genes and samples was performed in three ways:
 3. Clustering of samples alone (Figure 4).
 
  
+![Figure 1: EFGR siggnaling](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
 
-![Figure 1: _**_EGFR signaling and related pathways in cancer_]\(![Figure 1: EGFR signaling and related pathways in cancer](Stage 2"/Images"/Figure 1.png)
 
  
 
