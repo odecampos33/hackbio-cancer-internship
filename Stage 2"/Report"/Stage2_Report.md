@@ -35,7 +35,7 @@ Clustering of genes and samples was performed in three ways:
 
  
 
-![Figure 1: _**_EGFR signaling and related pathways in cancer_]\(Images/Figure 1.png)
+![Figure 1: _**_EGFR signaling and related pathways in cancer_]\(![Figure 1: EGFR signaling and related pathways in cancer](Stage 2"/Images"/Figure 1.png)
 
  
 
