@@ -19,7 +19,7 @@ This task focuses on visualizing and interpreting a gene expression dataset rela
 
 Numerous genes are implicated in the pathogenesis of glioblastoma, including the EGF (Epidermal Growth Factor) gene, which encodes the Epidermal Growth Factor Receptor (EGFR) protein that plays a critical role in cell signaling pathways regulating cell division and survival (Brosseau et al., 2015; Huang et al., 2023; Chen et al., 2016; Singh et al., 2023).
 
-![Figure 1 EGFR Signalling(Stage 2"/Images"/EGFR_signaling.png)]
+![Figure 1 EGFR Signalling](Stage 2"/Images"/EGFR_signaling.png)
 
  
 
