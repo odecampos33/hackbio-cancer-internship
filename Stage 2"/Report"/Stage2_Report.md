@@ -27,8 +27,6 @@ Using the glioblastoma dataset, containing over 500 differentially expressed gen
 
 ![Figure 2](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/Sequential_color_palette.png?raw=true)
 
-https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/diverging_color_palette.png?raw=true
-
 Clustering of genes and samples was performed in three ways:
 
 1. Clustering of genes alone (Figure 2).
