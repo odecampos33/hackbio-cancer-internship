@@ -19,8 +19,7 @@ This task focuses on visualizing and interpreting a gene expression dataset rela
 
 Numerous genes are implicated in the pathogenesis of glioblastoma, including the EGF (Epidermal Growth Factor) gene, which encodes the Epidermal Growth Factor Receptor (EGFR) protein that plays a critical role in cell signaling pathways regulating cell division and survival (Brosseau et al., 2015; Huang et al., 2023; Chen et al., 2016; Singh et al., 2023).
 
-https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true
-![Figure 1: EGFR signaling](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
+![Figure 1](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
  
 **Data Preprocessing and Visualization**
 
