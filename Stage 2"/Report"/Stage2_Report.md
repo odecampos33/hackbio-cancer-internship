@@ -29,7 +29,8 @@ Using the glioblastoma dataset, containing over 500 differentially expressed gen
 
 Figure 2. Seuential color Pallete
 
-![Figure 3](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/diverging_color_palette.png?raw=true)
+![Figure 3: Diverging color Pallete](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/diverging_color_palette.png?raw=true)
+Figure 3: Diverging color Pallete
 Clustering of genes and samples was performed in three ways:
 
 1. Clustering of genes alone (Figure 2).
