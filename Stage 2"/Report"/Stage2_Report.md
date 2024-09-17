@@ -41,12 +41,18 @@ Clustering of genes and samples was performed in three ways:
 
  ![Figure 4](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/Gene_only.png?raw=true)
 
+Figure 4: Cluster of gene only
+
 
 ![Figure 5](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/Gene_and_sample.png?raw=true)
  
 
+Figure 5: Cluster of Gene and Sample
+
+
 ![Figure 6](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/samples_only.png?raw=true)
 
+Figure 6: Cluster of Sample only
 
 These visualizations identified distinct gene expression patterns, helping to group related genes and patients based on their molecular signatures.
 
@@ -327,7 +333,9 @@ Then:__<!--[if gte msEquation 12]><m:oMathPara><m:oMath><i
   o:title="" chromakey="white"/>
 </v:shape><![endif]--><!--[if !vml]-->![](file:///C:/Users/hp/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)<!--[endif]--><!--[endif]-->__
 
-![Figure 6:](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/volcano%20plot.png?raw=true)
+![Figure 7:](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/volcano%20plot.png?raw=true)
+
+Figure 7: Volcano plot
 
 The cut-offs were >1.5 for upregulation and <-1.5 for downregulation. From the analysis, 10 genes were upregulated and 2 were downregulated (Figure 5). A volcano plot was created to visualize these results (Figure 5).
 
