@@ -20,13 +20,16 @@ This task focuses on visualizing and interpreting a gene expression dataset rela
 Numerous genes are implicated in the pathogenesis of glioblastoma, including the EGF (Epidermal Growth Factor) gene, which encodes the Epidermal Growth Factor Receptor (EGFR) protein that plays a critical role in cell signaling pathways regulating cell division and survival (Brosseau et al., 2015; Huang et al., 2023; Chen et al., 2016; Singh et al., 2023).
 
 ![Figure 1](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/EGFR_signaling.png?raw=true)
- 
+Figure 1: EGFR signaling pathway 
 **Data Preprocessing and Visualization**
 
 Using the glioblastoma dataset, containing over 500 differentially expressed genes from 10 patients, the first step involved preprocessing, which included data normalization and exploration. Heatmaps were generated using a diverging and sequential color palette to improve interpretation. The diverging palette effectively visualized the difference between upregulated and downregulated genes, while the sequential palette allowed a smoother transition in gene expression intensities. Both palettes were essential for making high, low, and medium values easily distinguishable.
 
 ![Figure 2](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/Sequential_color_palette.png?raw=true)
 
+Figure 2. Seuential color Pallete
+
+![Figure 3](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%202%22/Images%22/diverging_color_palette.png?raw=true)
 Clustering of genes and samples was performed in three ways:
 
 1. Clustering of genes alone (Figure 2).
