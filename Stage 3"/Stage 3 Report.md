@@ -61,7 +61,10 @@ The results showed that most of the upregulated genes were involved in the cell 
 
 Conversely, downregulated genes were mainly linked to striated muscle cell differentiation, muscle structure development, and processes such as muscular contraction, heart rate regulation, and synaptic signaling (Fig 3).
 
-![upregulated_biological_process](enrichment/upgene_bio_proc.png)
+
+
+![image](https://github.com/user-attachments/assets/9c7e5615-6753-482d-8f4f-f6cbe4d5e2ac)
+
 
 _**Fig 2**: Biological Processes (Upregulated)_
 
