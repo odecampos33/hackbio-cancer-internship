@@ -1,0 +1,3 @@
+"Enrichment FDR","nGenes","Pathway Genes","Fold Enrichment","Pathway","URL","Genes"
+0.019244051394938,2,3,117.338461538462,"GO:0035276 ethanol binding "," http://amigo.geneontology.org/amigo/term/GO:0035276","ENSG00000196344 ENSG00000198099"
+0.019244051394938,3,15,35.2015384615385,"GO:0070492 oligosaccharide binding "," http://amigo.geneontology.org/amigo/term/GO:0070492","ENSG00000007908 ENSG00000174175 ENSG00000118004"
