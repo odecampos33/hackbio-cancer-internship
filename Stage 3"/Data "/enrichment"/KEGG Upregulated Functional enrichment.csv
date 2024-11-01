@@ -1,0 +1,8 @@
+"Enrichment FDR","nGenes","Pathway Genes","Fold Enrichment","Pathway","URL","Genes"
+2.03123044742477e-10,16,126,11.1322751322751,"Path:hsa04110 Cell cycle","http://www.genome.jp/kegg-bin/show_pathway?hsa04110 "," CDKN2A  SMC1B  SFN  ORC1  BUB1  BUB1B  TTK  CDC45  PKMYT1  CCNB2  PTTG1  ESPL1  CDK1  CDC6  CDC20  CDC25C"
+5.37697071598984e-05,8,73,9.60730593607306,"Path:hsa04115 p53 signaling pathway","http://www.genome.jp/kegg-bin/show_pathway?hsa04115 "," CDKN2A  SFN  GTSE1  SERPINB5  RRM2  TP53AIP1  TP73  CCNB2"
+2.81956347014699e-06,12,135,7.79259259259259,"Path:hsa05322 Systemic lupus erythematosus","http://www.genome.jp/kegg-bin/show_pathway?hsa05322 "," H2AC13  H2AC14  H2AC16  H2BC13  H2BC7  H2BC9  H2BC17  H3C8  H3C12  H3C2  H4C4  H3C7"
+1.37404557739714e-05,11,131,7.36132315521629,"Path:hsa04114 Oocyte meiosis","http://www.genome.jp/kegg-bin/show_pathway?hsa04114 "," SGO1  SMC1B  CALML5  BUB1  PKMYT1  CCNB2  PTTG1  ESPL1  CDK1  CDC20  CDC25C"
+3.36814668699476e-07,15,186,7.06989247311828,"Path:hsa05034 Alcoholism","http://www.genome.jp/kegg-bin/show_pathway?hsa05034 "," GRIN1  GRIN2D  CALML5  H2AC13  H2AC14  H2AC16  H2BC13  H2BC7  H2BC9  H2BC17  H3C8  H3C12  H3C2  H4C4  H3C7"
+5.37697071598984e-05,12,189,5.56613756613757,"Path:hsa04613 Neutrophil extracellular trap formation","http://www.genome.jp/kegg-bin/show_pathway?hsa04613 "," H2AC13  H2AC14  H2AC16  H2BC13  H2BC7  H2BC9  H2BC17  H3C8  H3C12  H3C2  H4C4  H3C7"
+0.0027576003905686,10,202,4.33993399339934,"Path:hsa05203 Viral carcinogenesis","http://www.genome.jp/kegg-bin/show_pathway?hsa05203 "," CDKN2A  CCR8  ATP6V0D2  H2BC13  H2BC7  H2BC9  H2BC17  H4C4  CDK1  CDC20"
