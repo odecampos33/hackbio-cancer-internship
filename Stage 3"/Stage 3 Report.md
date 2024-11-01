@@ -125,7 +125,7 @@ Enrichment FDR |nGenes	|Pathway Genes|Fold Enrichment |Pathway
 
 ### **Model Performance**
 
-Model performance on the test set showed a perfect score in all metrics evaluated (Tables 3 & 4). The confusion matrix (Fig 7) shows that all test samples in both tumour and normal classes were correctly classified by the kNN model.
+Model performance on the test set showed a perfect score in all metrics evaluated (Tables 3 & 4). The confusion matrix (Fig 6) shows that all test samples in both tumour and normal classes were correctly classified by the kNN model.
 
 __Table 3: Model Performance (Train data)__
 
@@ -148,9 +148,10 @@ F1          | 100
 Specificity	| 100			
 Precision	| 100
 
-![confusion_matrix](imgs/knn_conf_mat.png)
+![image](https://github.com/user-attachments/assets/1a91ca28-6367-41f7-9847-2184eb290e14)
 
-_**Fig 7**: Confusion Matrix (test set)_
+
+_**Fig 6**: Confusion Matrix (test set)_
 
 ## **Conclusion and Future Research**
 
