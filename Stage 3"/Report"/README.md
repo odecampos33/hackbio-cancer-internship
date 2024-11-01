@@ -49,7 +49,7 @@ Differential gene expression analysis was performed using the likelihood ratio m
 
 The image below shows a volcano plot of significantly and not significantly expressed genes 
 
-![volcano_plot]([imgs/volcano.png](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%203%22/Image%22/volcano.png?raw=true))
+![volcano_plot](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%203%22/Image%22/volcano.png?raw=true)
 
 _**Fig 1**: Volcano plot showing upregulated, down regulated and not statistically significant genes_
 
