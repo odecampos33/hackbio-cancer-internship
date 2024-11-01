@@ -84,7 +84,8 @@ More info about enriched pathways for down and up regulated genes can be found [
 
 Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated genes](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
 
-![upregulated_molecular_function](enrichment/upgene_molec_func.png)
+![image](https://github.com/user-attachments/assets/e96e96ea-cc43-49d6-99a7-9625a66dfb53)
+
 
 _**Fig 4**: Molecular Function (Upregulated)_
 
