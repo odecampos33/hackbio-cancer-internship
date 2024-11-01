@@ -1,64 +1,64 @@
 
-# **Stage 3 Task**
+# **Identifying Key Genetic Biomarkers in Cervical Cancer Using Machine Learning and Differential Gene Expression Analysis**
 
-## **Overview**
 
-In this project, you will work as a team. Your objective is to identify potential cancer biomarkers from a given dataset using differential expression and machine learning models. This project will require creative thinking and collaboration, leveraging the strengths of both fields.
+## **Introduction to Cervical Cancer**
 
-- Form a team; 3 ML engineers and 5 biomarker developers
+Cervical cancer is a significant global health challenge and one of the leading causes of cancer deaths in women, especially in the developing world (Bedell et al., 2020). Globally, it is the fourth most common cancer type and the fourth cause of cancer-related death among women (Bray et al., 2024). It is mainly caused by persistent infection with high-risk strains of human papillomavirus (HPV) (Banzola et al., 2018). If untreated, HPV can lead to cervical intraepithelial neoplasia (CIN), eventually progressing to cervical cancer (Balasubramaniam et al., 2019). Fortunately, HPV vaccination and regular screening programs, such as Pap smears and HPV tests, have played crucial roles in reducing cervical cancer incidence and mortality worldwide (Bedell et al., 2020).
 
-- Pick any cancer type/subtype and download from TCGA.
+## **Methodology**
 
-- Clean and preprocess the data (primarily biomarker team)
-    - Handle missing values, normalize gene expression data.
-    - Reduce the data to a maximum of 20 samples for the primary and 20 for the recurring tumor types. Please provide annotation for your data. (Feel free to pick other sample classification/categories you are interested in)
-    - From here, the biomarker developer shares the dataset with machine learning engineer
+### **Dataset Description and Preprocessing Steps**
 
-- Biomarker Discovery Specialist would:
-    - Conduct differential expression analysis
-    - Conduct functional enrichment analysis
+Cervical cancer data for this study was sourced from [The Cancer Genome Atlas (TCGA)](https://www.cancer.gov/ccg/research/genome-sequencing/tcga). The dataset comprised 309 samples: 304 primary tumor samples, 3 normal samples, and the remainder were metastasis cases. We selected primary tumor and normal tissue samples for analysis, narrowing the data down to 40 samples by selecting all 3 normal samples and randomly choosing 37 tumor samples stratified by age group.
 
-- ML Engineer would:
-    - Prepare the data for ML
-    - Perform feature selection
-    - Conduct kNN or random forest classification
+### **Data Preparation and Preprocessing**
 
-- Final Report
-    - Submit you complete code from data collection, ML and differential expression analysis to final figures
-    - Write a comprehensive report that includes:
-        - Introduction to the selected cancer
-        - Description of the dataset and preprocessing steps.
-        - Detailed methodology for biomarker discovery and machine learning analysis.
-        - Results and interpretations of the identified biomarkers and model performance.
-        - Visualizations that effectively communicate your findings.
-        - Conclusion and future directions for research.
+Data preprocessing and normalization were conducted using the TCGAbiolinks library in R. The steps included
 
-# **Dataset selection and collection**
+- **Filtering genes:** Genes with a correlation less than 0.4 across samples were removed.
+- **Normalization:** Expression levels were normalized based on gene length and GC content.
+- **Exclusion of low-expression genes:** Genes with expression levels below the 25th percentile were excluded.
 
-Cervical cancer project data downloaded from [TCGA](https://www.cancer.gov/ccg/research/genome-sequencing/tcga). Data collection and preparation were done in R using the `TCGAbiolinks` library. A total of 309 samples were found in this dataset. 304 primary tumour types, 3 normal samples and the rest metastasis. The primary tumor and normal tissue sample types were selected. To meet up with maximum number of 40 samples criteria, we selected all normal samples and randomly selected 37 tumour samples by stratifying by age group.
+### **Biomarker Discovery and Machine Learning**
 
-## **Data Preparation and Preprocessing**
+#### **Differential Gene Expression (DGE) Analysis**
 
-Data preprocessing and normalisation were also done using the `TCGAbiolinks` library. Data preprocessing involves removing genes across samples with correlation less than 0.4, normalising expression levels based on gene length and GC content and removing genes with zeros below the 25th percentile.
+We performed DGE analysis using the likelihood ratio method, identifying differentially expressed genes based on the criteria: False discovery rate (FDR) < 0.01 and Absolute log fold change > 5. Genes with FDR < 0.01 and LogFC < -5 were classified as downregulated, while genes with FDR < 0.01 and LogFC > 5 were classified as upregulated. The preprocessed data, consisting of 30,753 genes, was used for subsequent machine learning predictions (Fig 1).
 
-## **Data Analysis**
+#### **Pathway Enrichment Analysis**
+We conducted pathway enrichment analysis to determine the biological roles of the upregulated and downregulated genes. This included analyzing the molecular functions, cellular localization, and biochemical pathways in which these genes are involved.
 
-### **Differential Gene Expression Analysis (DGE Analysis)**
 
-Differential gene expression analysis was performed using the likelihood ratio method. Differentially expressed genes were selected based on the cutoff (false discovery ratio (FDR) < 0.01 and absolute log fold change value > 5), where genes with FDR < 0.01 & LogFC < -5 were grouped as downregulated genes and genes with FDR < 0.01 & LogFC > 5 as upregulated genes. Finally, the preprocessed counts (30,753 genes) data were saved for machine learning prediction.
+#### **Machine Learning**
 
-The image below shows a volcano plot of significantly and not significantly expressed genes 
+__Data Splitting__
+
+Due to class imbalance in the dataset, we allocated 25% of the majority class and one sample from the minority class to the test set, while the remaining samples were used for training.
+
+__Feature Selection__
+
+- __Filtering:__ Genes with FDR > 0.05 were removed, reducing the number of features from 30,753 to 4,177.
+- __Lasso Logistic Regression:__ A Lasso regression model was used to select features by applying a penalty which shrank unimportant features to exactly zero. A total of 12 genes selected for modeling based on non-zero coefficient values (Fig 6).
+
+__Modeling__
+
+A k-nearest neighbors (k-NN) algorithm (k=5) was used to train a model for predicting cervical tissue types. The model's performance was evaluated using accuracy, recall, F1 score, precision, and specificity.
+
+## **Results and Interpretation**
+
+Fig 1 shows a volcano plot showing upregulated (red) and downregulated genes (green) at the chosen cutoffs.
 
 ![volcano_plot](imgs/volcano.png)
 
 _**Fig 1**: Volcano plot showing upregulated, down regulated and not statistically significant genes_
 
-### **Pathway Enrichment Analysis**
-After selecting the upregulated and downregulated genes, pathway enrichment analysis was performed to understand the biological processes these genes are involved in, the molecular function and cellular localisation of their gene products, as well as their biochemical pathways. 
 
-#### **Biological Processes**
+### **Biological Processes**
 
-From results, the cell-cycle pathway is highly enriched in the pathogenesis of cervical cancer. Most of the upregulated genes are directly involved in the cell cycle pathway, either as genes that are involved in the regulation of the mitotic or meiotic phase of cell division and differentiation. Other processes that are enriched are the muscular system and nervous system processes and other signalling pathways. Most of the downregulated genes are found to be invoved in striated muscle cell differentiation and muscle structure development, muscular contraction, negative regulation of heart rate an contraction, blood circulation or response to synaptic signalling.
+The results showed that most of the upregulated genes were involved in the cell cycle pathway, which plays a significant role in the pathogenesis of cervical cancer. Other enriched processes included the muscular system, nervous system signaling, and cellular differentiation pathways (Fig 2).
+
+Conversely, downregulated genes were mainly linked to striated muscle cell differentiation, muscle structure development, and processes such as muscular contraction, heart rate regulation, and synaptic signaling (Fig 3).
 
 ![upregulated_biological_process](enrichment/upgene_bio_proc.png)
 
@@ -72,9 +72,12 @@ _**Fig 3**: Biological Processes (downregulated)_
 More info about enriched pathways for down and up regulated genes can be found [here](enrichment/Down%20regulated%20enrichment%20Biological%20Processes.csv) and [here](enrichment/Upregulated%20enrichment%20GO%20Biological%20Process.csv)
 
 
-#### **Molecular Function**
+### **Molecular Function**
 
-Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
+- Upregulated genes: Involved in processes such as cell division, mitotic regulation, and differentiation (Fig 4).
+- Downregulated genes: Associated with muscle development, contraction, and signaling pathways (Fig 5).
+
+Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated genes](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
 
 ![upregulated_molecular_function](enrichment/upgene_molec_func.png)
 
@@ -85,9 +88,9 @@ _**Fig 4**: Molecular Function (Upregulated)_
 _**Fig 5**: Molecular Function (Downregulated)_
 
 
-#### **Biochemical Pathways**
+### **Biochemical Pathways**
 
-From the KEGG pathways result, the top 5 molecular pathways these downregulated genes are involved in include the renin-angiotensin system, $\beta$-adrenergic, cAMP, cGMP signalling pathways and the neuroactive ligand receptor interaction. On the other hand, the molecular pathways enriched by upregulated genes include
+The top 5 biochemical pathways enriched by downregulated and upregulated genes are shown below.
 
 **Table 1: KEGG Pathways (Downregulated genes)**
 
@@ -98,7 +101,6 @@ Enrichment FDR |nGenes	|Pathway Genes|Fold Enrichment |Pathway
 0.008437578	   |7	    |221	      |5.892175257	   |cAMP signaling pathway
 0.03256974	   |5	    |149	      |6.242429203	   |Adrenergic signaling in cardiomyocytes
 0.041900311	   |5	    |166	      |5.603144284	   |cGMP-PKG signaling pathway
-
 
 
 **Table 2: KEGG Pathways (Upregulated genes)**
@@ -114,29 +116,9 @@ Enrichment FDR |nGenes	|Pathway Genes|Fold Enrichment |Pathway
 0.0027576	   |10	    |202	      |4.339933993	   |Viral carcinogenesis
 
 
-### **Machine Learning**
+### **Model Performance**
 
-__Data Splitting__
-
-Due to class imbalance, 25% of the majority class and one sample from the minority class were used for test set, while the rest for training data.
-
-__Data Preprocessing__
-
-Train and test data were scaled using information from the train data.
-
-__Feature selection__
-
-- Removing statistically not significant genes: To reduce the number of features that will be used for model development, genes with FDR > 0.05 were filtered out. A total of 26,576 genes were removed.
-- After scaling, 5 genes with all samples in them having missing values were removed.
-- Lasso Logistic regression: Lasso regression was used to select important features. To do so a small penalty was applied shrinking the coefficients of some variables to exactly zero. Variables with non-zero coefficient values were selected for modelling. A total of 12 genes was selected (Figure 6).
-
-![lasso_selected_features](imgs/lasso_features.png)
-
-_**Fig 6**: Lasso regression selected features with odds ratio and log odds (text)_
-
-__Modelling__
-
-A simple k-nearest neighbours algorithm with 5-nearest neighbours was used to train a model to predict cervical tissue types. Model performance was evaluated based on accuracy, recall, F1 score, precision and specificity (Tables 3 & 4). Figure 7 shows a confusion matrix of model predictions on test data.
+Model performance on the test set showed a perfect score in all metrics evaluated (Tables 3 & 4). The confusion matrix (Fig 7) shows that all test samples in both tumour and normal classes were correctly classified by the kNN model.
 
 __Table 3: Model Performance (Train data)__
 
@@ -163,12 +145,29 @@ Precision	| 100
 
 _**Fig 7**: Confusion Matrix (test set)_
 
-__Group Members__
+## **Conclusion and Future Research**
+
+This study highlights the significant role of the cell cycle in cervical cancer pathogenesis, as revealed by the upregulated genes. The successful identification of 12 key genes via Lasso regression demonstrates the potential for accurate machine learning-based tissue classification. Future research can focus on validating these biomarkers in larger cohorts and exploring their potential as therapeutic targets. Additionally, further investigation into the pathways associated with downregulated genes could uncover novel insights into cervical cancer progression and treatment.
+
+## **REFERENCES**
+1. Balasubramaniam, S. D., Balakrishnan, V., Oon, C. E., & Kaur, G. (2019). Key Molecular Events in Cervical Cancer Development. Medicina, 55(7). https://doi.org/10.3390/MEDICINA55070384
+
+2. Banzola, I., Mengus, C., Wyler, S., Hudolin, T., Manzella, G., Chiarugi, A., Boldorini, R., Sais, G., Schmidli, T. S., Chiffi, G., Bachmann, A., Sulser, T., Spagnoli, G. C., & Provenzano, M. (2018). Expression of indoleamine 2,3-dioxygenase induced by IFN-γ and TNF-α as potential biomarker of prostate cancer progression. Frontiers in Immunology, 9(MAY). https://doi.org/10.3389/fimmu.2018.01051
+
+3. Bedell, S. L., Goldstein, L. S., Goldstein, A. R., & Goldstein, A. T. (2020). Cervical Cancer Screening: Past, Present, and Future. Sexual Medicine Reviews, 8(1), 28–37. https://doi.org/10.1016/j.sxmr.2019.09.005
+
+4. Bray, F., Laversanne, M., Sung, H., Ferlay, J., Siegel, R. L., Soerjomataram, I., & Jemal, A. (2024). Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA: A Cancer Journal for Clinicians, 74(3), 229–263. https://doi.org/10.3322/caac.21834
+
+5. Rosati, D., Palmieri, M., Brunelli, G., Morrione, A., Iannelli, F., Frullanti, E., & Giordano, A. (2024). Differential gene expression analysis pipelines and bioinformatic tools for the identification of specific biomarkers: A review. Computational and Structural Biotechnology Journal, 23(October 2023), 1154–1168. https://doi.org/10.1016/j.csbj.2024.02.018
+
+6. Shaon, M. S. H., Karim, T., Shakil, M. S., & Hasan, M. Z. (2024). A comparative study of machine learning models with LASSO and SHAP feature selection for breast cancer prediction. Healthcare Analytics, 6(June). https://doi.org/10.1016/j.health.2024.100353
+
+
+### __Group Members__
 
 >- Chigozie Nkwocha
 >- Chaima Ben Mohamed
 >- Charlotte Chinwendu Iwuji
->- Igwebuike Oluchukwu Vivian
 >- Opeyemi De Campos
 >- Reem Atawia
 
