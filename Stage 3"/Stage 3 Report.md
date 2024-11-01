@@ -89,7 +89,8 @@ Figure 4 and 5 show the molecular functions these gene products play in the huma
 
 _**Fig 4**: Molecular Function (Upregulated)_
 
-![downregulated_molecular_function](enrichment/downgene_molec_func.png)
+![image](https://github.com/user-attachments/assets/7c20e2c0-29db-4ca8-ae26-7725ae4a51c9)
+
 
 _**Fig 5**: Molecular Function (Downregulated)_
 
