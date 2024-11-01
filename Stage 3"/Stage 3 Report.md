@@ -49,7 +49,8 @@ A k-nearest neighbors (k-NN) algorithm (k=5) was used to train a model for predi
 
 Fig 1 shows a volcano plot showing upregulated (red) and downregulated genes (green) at the chosen cutoffs.
 
-![volcano_plot](imgs/volcano.png)
+![volcano_plot](https://github.com/user-attachments/assets/c99485ff-c93a-418d-8e16-dcff1ff0449e)
+
 
 _**Fig 1**: Volcano plot showing upregulated, down regulated and not statistically significant genes_
 
