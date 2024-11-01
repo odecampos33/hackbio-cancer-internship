@@ -69,7 +69,8 @@ Conversely, downregulated genes were mainly linked to striated muscle cell diffe
 _**Fig 2**: Biological Processes (Upregulated)_
 
 
-![downregulated_biological_process](enrichment/downgene_bio_proc.png)
+![image](https://github.com/user-attachments/assets/f1183d2e-0b58-4c8a-b78d-b6b378316617)
+
 
 _**Fig 3**: Biological Processes (downregulated)_
 
