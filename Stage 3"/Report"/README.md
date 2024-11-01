@@ -60,7 +60,7 @@ After selecting the upregulated and downregulated genes, pathway enrichment anal
 
 From results, the cell-cycle pathway is highly enriched in the pathogenesis of cervical cancer. Most of the upregulated genes are directly involved in the cell cycle pathway, either as genes that are involved in the regulation of the mitotic or meiotic phase of cell division and differentiation. Other processes that are enriched are the muscular system and nervous system processes and other signalling pathways. Most of the downregulated genes are found to be invoved in striated muscle cell differentiation and muscle structure development, muscular contraction, negative regulation of heart rate an contraction, blood circulation or response to synaptic signalling.
 
-![upregulated_biological_process](enrichment/upgene_bio_proc.png)
+![upregulated_biological_process](https://github.com/odecampos33/hackbio-cancer-internship/blob/main/Stage%203%22/Image%22/upgene_bio_proc.png?raw=true)
 
 _**Fig 2**: Biological Processes (Upregulated)_
 
