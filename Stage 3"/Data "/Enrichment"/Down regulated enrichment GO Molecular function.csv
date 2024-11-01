@@ -1,0 +1,7 @@
+"Enrichment FDR","nGenes","Pathway Genes","Fold Enrichment","Pathway","URL","Genes"
+0.0160526144856338,2,3,124.016260162602,"GO:0001601 peptide YY receptor activity "," http://amigo.geneontology.org/amigo/term/GO:0001601"," NPY5R  NPY1R"
+0.0160526144856338,2,4,93.0121951219512,"GO:0001595 angiotensin receptor activity "," http://amigo.geneontology.org/amigo/term/GO:0001595"," MAS1  AGTR2"
+0.0160526144856338,2,4,93.0121951219512,"GO:0004945 angiotensin type II receptor activity "," http://amigo.geneontology.org/amigo/term/GO:0004945"," AGTR2  MAS1"
+0.0213280835171174,2,5,74.409756097561,"GO:0001602 pancreatic polypeptide receptor activity "," http://amigo.geneontology.org/amigo/term/GO:0001602"," NPY5R  NPY1R"
+0.0370617919508972,2,7,53.1498257839721,"GO:0106256 hydroperoxy icosatetraenoate dehydratase activity "," http://amigo.geneontology.org/amigo/term/GO:0106256"," PTGIS  CYP1A1"
+0.0160526144856338,3,19,29.3722721437741,"GO:0036122 BMP binding "," http://amigo.geneontology.org/amigo/term/GO:0036122"," GREM2  UCMA  CHRDL1"
